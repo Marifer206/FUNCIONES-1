@@ -83,8 +83,31 @@ Dado la figura de la imagen, desarrolle:
 + Revise como utilizar el valor de pi usando import math y math.pi
 
 ```ruby
+import math
 
+def calcular_volumen(radio_esfera:float, radio_cono:float, altura_cono:float) -> float:
+    volumen_esfera = (4/3) * (radio_esfera**3) * math.pi
+    volumen_cono = (altura_cono/3) * (radio_cono**2) * math.pi
+    return volumen_esfera + volumen_cono    
+
+def calcular_area(radio_esfera:float, radio_cono:float, altura_cono:float) -> float:
+    area_esfera = 4 * math.pi * radio_esfera**2
+    altura_oblicua = math.sqrt(altura_cono*2 + radio_cono*2)
+    area_cono = (math.pi * radio_cono * altura_oblicua) + (math.pi * radio_cono**2)
+    return area_esfera + area_cono
+
+if _name_ == '_main_':
+    radio_esfera = float(input("Ingrese el radio de la esfera en cm: "))
+    radio_cono = float(input("Ingrese el radio del cono en cm: "))
+    altura_cono = float(input("Ingrese la altura del cono en cm: "))
+    volumen = calcular_volumen(radio_esfera, radio_cono, altura_cono)
+    area = calcular_area(radio_esfera, radio_cono, altura_cono)
+    print("El volumen de la figura es: " + str(volumen) + " cm^3")
+    print("El área de la figura es: " + str(area) + " cm^2")
 ```
+El programa ejecutado se ve asi
+
+
 
 ### PUNTO #2
 Dado la figura de la imagen, desarrolle:
@@ -101,6 +124,10 @@ Dado la figura de la imagen, desarrolle:
 ```ruby
 
 ```
+El programa ejecutado se ve asi
+
+
+
 ### PUNTO #3
 Diseñe una función que calcule la cantidad de carne de aves en kilos si se tienen N gallinas, M gallos y K pollitos cada uno pesando 6 kilos, 7 kilos y 1 kilo respectivamente.
 
@@ -108,12 +135,19 @@ Diseñe una función que calcule la cantidad de carne de aves en kilos si se tie
 
 ```
 
+El programa ejecutado se ve asi
+
+
+
 ### PUNTO #4
 Mi mamá me manda a comprar P panes a 300 cada uno, M bolsas de leche a  3300 cada una y H huevos a  350 cada uno. Hacer un programa que me diga las vueltas (o lo que quedo debiendo) cuando me da un billete de B pesos.
 
 ```ruby
 
 ```
+El programa ejecutado se ve asi
+
+
 
 ### PUNTO #5
 Haga un programa que utilice una función para calcular el valor de un préstamo `C` usando interés compuesto del `i` por `n` meses.
@@ -127,6 +161,11 @@ El número de contagiados de Covid-19 en el país de NuncaLandia se duplica cada
 ```ruby
 
 ```
+
+El programa ejecutado se ve asi
+
+
+
 ### PUNTO #7
  Escriba un programa que pida 5 números reales y calcule las siguientes operaciones usando una función para cada una:
   + El promedio
@@ -140,15 +179,24 @@ El número de contagiados de Covid-19 en el país de NuncaLandia se duplica cada
 ```ruby
 
 ```
+
+El programa ejecutado se ve asi
+
+
+
 ### PUNTO #8
  Para el punto anterior incluir las funciones en un archivo independiente e importarlas para su uso.
 
 ```ruby
 
 ```
+
 ### PUNTO #9
 Consultar qué es y cómo funciona *pip* en python.
-Pip es un sistema de gestión de paquetes para Python que permite instalar, actualizar y desinstalar fácilmente paquetes de software escritos en Python. Es muy útil para instalar bibliotecas y módulos de Python que no están incluidos en la biblioteca estándar de Python.
+
+***Consulta Pip:*** 
+
+Es un sistema de gestión de paquetes para Python que permite instalar, actualizar y desinstalar fácilmente paquetes de software escritos en Python. Es muy útil para instalar bibliotecas y módulos de Python que no están incluidos en la biblioteca estándar de Python.
 
 ```ruby
 

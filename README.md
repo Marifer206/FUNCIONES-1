@@ -31,7 +31,7 @@ if __name__ == "__main__":
     print("La fuerza de gravedad entre los dos objetos es:", fuerza_gravedad, "Newtons")
 ```
 
-El programa ejecutado se ve asi
+:checkered_flag: El programa ejecutado se ve asi
 
 [![image.png](https://i.postimg.cc/q7wqfR9y/image.png)](https://postimg.cc/GBBdGc3m)
 
@@ -65,7 +65,7 @@ print(grados, "grados equivalen a", radianes, "radianes")
 print("La raíz cuadrada de", numero_raiz, "es:", raiz_cuadrada)
 ```
 
-El programa ejecutado se ve asi
+:checkered_flag: El programa ejecutado se ve asi
 
 [![image.png](https://i.postimg.cc/0NxrZhbr/image.png)](https://postimg.cc/TK7R37jX)
 
@@ -82,9 +82,11 @@ Dado la figura de la imagen, desarrolle:
 + Cree dos funciones en python para calcular los valores antes establecidos, al ingresar por teclado r1, r2 y h.
 + Revise como utilizar el valor de pi usando import math y math.pi
 
+#### CODIGO DEL PROGRAMA
 ```ruby
 import math
 
+# Declaramos funcion y damos sus instrucciones
 def calcular_volumen(radio_esfera:float, radio_cono:float, altura_cono:float) -> float:
     volumen_esfera = (4/3) * (radio_esfera**3) * math.pi
     volumen_cono = (altura_cono/3) * (radio_cono**2) * math.pi
@@ -102,10 +104,12 @@ if _name_ == '_main_':
     altura_cono = float(input("Ingrese la altura del cono en cm: "))
     volumen = calcular_volumen(radio_esfera, radio_cono, altura_cono)
     area = calcular_area(radio_esfera, radio_cono, altura_cono)
+    
+    # Mostramos los resultados
     print("El volumen de la figura es: " + str(volumen) + " cm^3")
     print("El área de la figura es: " + str(area) + " cm^2")
 ```
-El programa ejecutado se ve asi
+:checkered_flag: El programa ejecutado se ve asi
 
 
 
@@ -121,48 +125,120 @@ Dado la figura de la imagen, desarrolle:
 + Cree dos funciones en python para calcular los valores antes establecidos, al ingresar por teclado `r`, `a` y `b`.
 + Revise como utilizar el valor de `pi` usando *import math* y *math.pi
 
+#### CODIGO DEL PROGRAMA
 ```ruby
+import math
 
+# Declaramos funcion y damos sus instrucciones
+def perimetro(r:float, a:float, b:float) -> float:
+    rectangulo = 2 * b + 2 * a
+    circulo = 2 * math.pi * r
+    return rectangulo + 2 * circulo
+
+def area(r:float, a:float, b:float) -> float:
+    rectangulo = a * b
+    circulo = math.pi * r**2
+    return rectangulo + 2 * circulo
+
+if _name_ == '_main_':
+    r = float(input("Ingrese el valor del radio (en cm): "))
+    a = float(input("Ingrese la longitud del lado más corto del rectángulo (en cm): "))
+    b = float(input("Ingrese la longitud del lado más largo del rectángulo (en cm): "))
+    per = perimetro(r, a, b)
+    ar = area(r, a, b)
+    
+    # Mostramos los resultados
+    print("El perímetro de la figura es: " + str(per) + " cm.")
+    print("El área de la figura es: " + str(ar) + " cm².")
 ```
-El programa ejecutado se ve asi
+:checkered_flag: El programa ejecutado se ve asi
 
 
 
 ### PUNTO #3
 Diseñe una función que calcule la cantidad de carne de aves en kilos si se tienen N gallinas, M gallos y K pollitos cada uno pesando 6 kilos, 7 kilos y 1 kilo respectivamente.
 
+#### CODIGO DEL PROGRAMA
 ```ruby
 
+# Declaramos funcion y damos sus instrucciones
+def calcular_cantidad_carne_aves():
+    peso_gallinas = n_gallinas * 6
+    peso_gallos = m_gallos * 7
+    peso_pollitos = k_pollitos * 1
+    total_peso = peso_gallinas + peso_gallos + peso_pollitos
+    return total_peso
+
+if _name_ == '_main_':
+    n_gallinas = int(input("Ingrese la cantidad de gallinas: "))
+    m_gallos = int(input("Ingrese la cantidad de gallos: "))
+    k_pollitos = int(input("Ingrese la cantidad de pollitos: "))
+    cantidad_carne = calcular_cantidad_carne_aves()
+    
+    # Mostramos los resultados
+    print("La cantidad de carne de aves es:", cantidad_carne, "kilos")
 ```
 
-El programa ejecutado se ve asi
+:checkered_flag: El programa ejecutado se ve asi
 
 
 
 ### PUNTO #4
 Mi mamá me manda a comprar P panes a 300 cada uno, M bolsas de leche a  3300 cada una y H huevos a  350 cada uno. Hacer un programa que me diga las vueltas (o lo que quedo debiendo) cuando me da un billete de B pesos.
 
+#### CODIGO DEL PROGRAMA
 ```ruby
+# Declaramos funcion y damos sus instrucciones
+def calcular_vueltas(cantidad_panes, cantidad_leche, cantidad_huevos, monto_pagado):
+    # Calculamos el total de la compra
+    total_compra = cantidad_panes * 300 + cantidad_leche * 3300 + cantidad_huevos * 350
 
+    # Calculamos las vueltas o lo que queda debiendo
+    vueltas = monto_pagado - total_compra
+
+    if vueltas < 0:
+        # Devolvemos el valor de la deuda en lugar de las vueltas
+        return abs(vueltas)
+    else:
+        return vueltas
+
+
+if _name_ == '_main_':
+    cantidad_panes = int(input("Ingresa la cantidad de panes a comprar: "))
+    cantidad_leche = int(input("Ingresa la cantidad de bolsas de leche a comprar: "))
+    cantidad_huevos = int(input("Ingresa la cantidad de huevos a comprar: "))
+    monto_pagado = int(input("Ingresa el monto que pagarás: "))
+
+    vueltas = calcular_vueltas(cantidad_panes, cantidad_leche, cantidad_huevos, monto_pagado)
+    
+# Mostramos los resultados
+    if vueltas == 0:
+        print("No hay vueltas.")
+    elif vueltas < 0:
+        print("Lo siento, debes pagar un adicional de:", vueltas)
+    else:
+        print("Tus vueltas son:", vueltas)
 ```
-El programa ejecutado se ve asi
+:checkered_flag: El programa ejecutado se ve asi
 
 
 
 ### PUNTO #5
 Haga un programa que utilice una función para calcular el valor de un préstamo `C` usando interés compuesto del `i` por `n` meses.
 
+#### CODIGO DEL PROGRAMA
 ```ruby
 
 ```
 ### PUNTO #6
 El número de contagiados de Covid-19 en el país de NuncaLandia se duplica cada día. Hacer un programa que diga el número total de personas que se han contagiado cuando pasen D días a partir de hoy, si el número de contagiados actuales es C.
 
+#### CODIGO DEL PROGRAMA
 ```ruby
 
 ```
 
-El programa ejecutado se ve asi
+:checkered_flag: El programa ejecutado se ve asi
 
 
 
@@ -180,7 +256,7 @@ El programa ejecutado se ve asi
 
 ```
 
-El programa ejecutado se ve asi
+:checkered_flag: El programa ejecutado se ve asi
 
 
 

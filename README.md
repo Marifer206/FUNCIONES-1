@@ -296,18 +296,18 @@ if __name__ == '__main__':
 ### PUNTO #9
 Consultar qué es y cómo funciona *pip* en python.
 
-***Consulta Pip:*** 
+***Consulta pip:*** 
 
 (acrónimo de Package Installer for Python)
 
 Es un sistema de gestión de paquetes para Python que permite instalar, actualizar y desinstalar fácilmente paquetes de software escritos en Python. Es muy útil para instalar bibliotecas y módulos de Python que no están incluidos en la biblioteca estándar de Python.
 
-Para utilizar PIP, se debe tener Python instalado en el sistema. Normalmente, PIP viene preinstalado en las versiones más recientes de Python. Para verificar si PIP está instalado, se puede abrir una terminal o consola y ejecutar el siguiente comando:
+Para utilizar *pip*, se debe tener Python instalado en el sistema. Normalmente, *pip* viene preinstalado en las versiones más recientes de Python. Para verificar si está instalado, se puede abrir una terminal o consola y ejecutar el siguiente comando:
 
 ```ruby
 pip --version
 ```
-Si PIP no esta instalado, se puede instalar siguiendo las instrucciones en la página oficial de Python: https://pip.pypa.io/en/stable/installation/
+Si no esta instalado, se puede instalar siguiendo las instrucciones en la página oficial de Python: https://pip.pypa.io/en/stable/installation/
 
 Para instalar un paquete se utiliza el comando:
 
@@ -328,9 +328,61 @@ pip uninstall nombre_del_paquete
 ```
 
 ### PUNTO #10
-Hacer un listado de módulos populares para python que se puedan instalar com *pip* y consultar cómo instalarlos.
+Hacer un listado de módulos populares para python que se puedan instalar con *pip* y consultar cómo instalarlos.
 
+#### Listado de módulos populares para python instalados con *pip*
+
++ NumPy: Biblioteca para computación científica que permite trabajar con arrays y matrices de grandes dimensiones de manera eficiente. Se puede instalar con el siguiente comando:
 
 ```ruby
-
+pip install numpy
 ```
+
++ Pandas: Biblioteca para análisis de datos que proporciona estructuras de datos flexibles y de alto rendimiento. Se puede instalar con el siguiente comando:
+
+```ruby
+pip install pandas
+```
++ Matplotlib: Biblioteca para visualización de datos que permite crear gráficos y visualizaciones de alta calidad. Se puede instalar con el siguiente comando:
+
+```ruby
+pip install matplotlib
+```
+
++ Scikit-learn: Biblioteca para aprendizaje automático que proporciona herramientas para clasificación, regresión, clustering y preprocesamiento de datos. Se puede instalar con el siguiente comando:
+
+```ruby
+pip install scikit-learn
+```
+
++ Django: Framework web de alto nivel para Python que permite desarrollar aplicaciones web de manera rápida y eficiente. Se puede instalar con el siguiente comando:
+
+```ruby
+pip install django
+```
+
++ Flask: Microframework web para Python que permite desarrollar aplicaciones web rápidas y sencillas. Se puede instalar con el siguiente comando:
+
+```ruby
+pip install flask
+```
+
++ Requests: Biblioteca HTTP para Python que permite realizar solicitudes HTTP/1.1 con facilidad. Se puede instalar con el siguiente comando:
+
+```ruby
+pip install requests
+```
+
++ BeautifulSoup: Biblioteca para web scraping que permite extraer información de páginas web. Se puede instalar con el siguiente comando:
+
+```ruby
+pip install beautifulsoup4
+```
+
++ Pygame: Biblioteca para programación de juegos en Python. Se puede instalar con el siguiente comando:
+
+```ruby
+pip install pygame
+```
+
+Cabe resaltar que existen muchos mas módulos para Python que se pueden instalar con pip. Pero los anteriores solo son algunos de los mas populares

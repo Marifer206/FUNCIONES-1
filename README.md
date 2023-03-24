@@ -169,7 +169,7 @@ def calcular_cantidad_carne_aves():
     total_peso = peso_gallinas + peso_gallos + peso_pollitos
     return total_peso
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     n_gallinas = int(input("Ingrese la cantidad de gallinas: "))
     m_gallos = int(input("Ingrese la cantidad de gallos: "))
     k_pollitos = int(input("Ingrese la cantidad de pollitos: "))
@@ -181,7 +181,7 @@ if _name_ == '_main_':
 
 :checkered_flag: El programa ejecutado se ve asi
 
-
+[![image.png](https://i.postimg.cc/1Xv1qsV2/image.png)](https://postimg.cc/Pvv7GG4Q)
 
 ### PUNTO #4
 Mi mamá me manda a comprar P panes a 300 cada uno, M bolsas de leche a  3300 cada una y H huevos a  350 cada uno. Hacer un programa que me diga las vueltas (o lo que quedo debiendo) cuando me da un billete de B pesos.

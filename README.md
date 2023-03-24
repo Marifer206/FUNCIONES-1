@@ -228,18 +228,44 @@ Haga un programa que utilice una función para calcular el valor de un préstamo
 
 #### CODIGO DEL PROGRAMA
 ```ruby
+# Declaramos funcion y damos sus instrucciones
+def calcular_valor_prestamo(prestamo: float, tasa_interes: float, meses: int) -> float:
+    interes = tasa_interes * prestamo / 100
+    return prestamo + meses * interes
+
+if __name__ == '__main__':
+    prestamo = float(input("Ingrese el valor del préstamo en pesos: "))
+    tasa_interes = float(input("Ingrese la tasa de interés en porcentaje: "))
+    meses = int(input("Ingrese el número de meses para el préstamo: "))
+    valor_prestamo = calcular_valor_prestamo(prestamo, tasa_interes, meses)
+    
+    # Mostramos los resultados
+    print("El valor a pagar es de: " + str(valor_prestamo))
 
 ```
+:checkered_flag: El programa ejecutado se ve asi
+
+[![image.png](https://i.postimg.cc/3rVzv4PY/image.png)](https://postimg.cc/qgcmfRJ5)
+
 ### PUNTO #6
 El número de contagiados de Covid-19 en el país de NuncaLandia se duplica cada día. Hacer un programa que diga el número total de personas que se han contagiado cuando pasen D días a partir de hoy, si el número de contagiados actuales es C.
 
 #### CODIGO DEL PROGRAMA
 ```ruby
+def calcular_contagios(contagiados_actuales: int, dias_transcurridos: int) -> int:
+    return contagiados_actuales * (2 ** dias_transcurridos)
+
+if __name__ == '__main__':
+    contagiados_actuales = int(input("Ingrese el número de contagiados actuales: "))
+    dias_transcurridos = int(input("Ingrese el número de días a partir de hoy: "))
+    total_contagios = calcular_contagios(contagiados_actuales, dias_transcurridos)
+    print(f"El número total de personas contagiadas después de {dias_transcurridos} días es: {total_contagios}")
 
 ```
 
 :checkered_flag: El programa ejecutado se ve asi
 
+[![image.png](https://i.postimg.cc/wxLnDTHN/image.png)](https://postimg.cc/mhZds4PZ)
 
 
 ### PUNTO #7
@@ -272,11 +298,35 @@ Consultar qué es y cómo funciona *pip* en python.
 
 ***Consulta Pip:*** 
 
+(acrónimo de Package Installer for Python)
+
 Es un sistema de gestión de paquetes para Python que permite instalar, actualizar y desinstalar fácilmente paquetes de software escritos en Python. Es muy útil para instalar bibliotecas y módulos de Python que no están incluidos en la biblioteca estándar de Python.
 
+Para utilizar PIP, se debe tener Python instalado en el sistema. Normalmente, PIP viene preinstalado en las versiones más recientes de Python. Para verificar si PIP está instalado, se puede abrir una terminal o consola y ejecutar el siguiente comando:
+
 ```ruby
+pip --version
+```
+Si PIP no esta instalado, se puede instalar siguiendo las instrucciones en la página oficial de Python: https://pip.pypa.io/en/stable/installation/
+
+Para instalar un paquete se utiliza el comando:
+
+```ruby
+pip install nombre_del_paquete
 
 ```
+
+Para actualizar un paquete instalado se utiliza el comando:
+
+```ruby
+pip install --upgrade nombre_del_paquete
+```
+Para desinstalar un paquete se utiliza el comando:
+
+```ruby
+pip uninstall nombre_del_paquete
+```
+
 ### PUNTO #10
 Hacer un listado de módulos populares para python que se puedan instalar com *pip* y consultar cómo instalarlos.
 

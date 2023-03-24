@@ -189,9 +189,9 @@ Mi mamá me manda a comprar P panes a 300 cada uno, M bolsas de leche a  3300 ca
 #### CODIGO DEL PROGRAMA
 ```ruby
 # Declaramos funcion y damos sus instrucciones
-def calcular_vueltas(cantidad_panes, cantidad_leche, cantidad_huevos, monto_pagado):
+def calcular_vueltas(cantidad_panes, cantidad_leche, cantidad_huevos, monto_pagado)-> int:
     # Calculamos el total de la compra
-    total_compra = cantidad_panes * 300 + cantidad_leche * 3300 + cantidad_huevos * 350
+    total_compra = ((cantidad_panes * 300) + (cantidad_leche * 3300) + (cantidad_huevos * 350))
 
     # Calculamos las vueltas o lo que queda debiendo
     vueltas = monto_pagado - total_compra
@@ -202,8 +202,7 @@ def calcular_vueltas(cantidad_panes, cantidad_leche, cantidad_huevos, monto_paga
     else:
         return vueltas
 
-
-if _name_ == '_main_':
+if __name__ == '__main__':
     cantidad_panes = int(input("Ingresa la cantidad de panes a comprar: "))
     cantidad_leche = int(input("Ingresa la cantidad de bolsas de leche a comprar: "))
     cantidad_huevos = int(input("Ingresa la cantidad de huevos a comprar: "))
@@ -221,7 +220,7 @@ if _name_ == '_main_':
 ```
 :checkered_flag: El programa ejecutado se ve asi
 
-
+[![image.png](https://i.postimg.cc/Lshb5jmt/image.png)](https://postimg.cc/zLZjPbbv)
 
 ### PUNTO #5
 Haga un programa que utilice una función para calcular el valor de un préstamo `C` usando interés compuesto del `i` por `n` meses.

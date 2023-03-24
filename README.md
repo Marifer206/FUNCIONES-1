@@ -153,7 +153,7 @@ if _name_ == '_main_':
 ```
 :checkered_flag: El programa ejecutado se ve asi
 
-
+[![image.png](https://i.postimg.cc/05Bwvxhz/image.png)](https://postimg.cc/nMqzY8Fx)
 
 ### PUNTO #3
 Diseñe una función que calcule la cantidad de carne de aves en kilos si se tienen N gallinas, M gallos y K pollitos cada uno pesando 6 kilos, 7 kilos y 1 kilo respectivamente.

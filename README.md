@@ -98,7 +98,7 @@ def calcular_area(radio_esfera:float, radio_cono:float, altura_cono:float) -> fl
     area_cono = (math.pi * radio_cono * altura_oblicua) + (math.pi * radio_cono**2)
     return area_esfera + area_cono
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     radio_esfera = float(input("Ingrese el radio de la esfera en cm: "))
     radio_cono = float(input("Ingrese el radio del cono en cm: "))
     altura_cono = float(input("Ingrese la altura del cono en cm: "))
@@ -111,7 +111,7 @@ if _name_ == '_main_':
 ```
 :checkered_flag: El programa ejecutado se ve asi
 
-
+[![image.png](https://i.postimg.cc/449JKgm7/image.png)](https://postimg.cc/K4mXVC7x)
 
 ### PUNTO #2
 Dado la figura de la imagen, desarrolle:
